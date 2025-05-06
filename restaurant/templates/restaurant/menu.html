@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "restaurant/base.html" %}
+
+{% block content %}
+
+<h1>Menu</h1>
+<div>
+    {% for item in menu %}
+    <p>
+        {{ item.name }}
+        <span>{{ item.price }},00</span>
+    </p>
+    {% endfor %}
+</div>
+
+{% endblock content %}

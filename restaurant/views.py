@@ -8,6 +8,6 @@ def home(request):
 
 def menu(request):
     menu_data = models.Menu.objects.all()
-    return render('request', 'menu.html', {'menu' : menu_data} )
+    return render('request', 'restaurant/menu.html', {'menu' : menu_data} )
 
 
